@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "95b9abf9-f9c2-4049-b337-283523da0a2f",
+		"name": "Server Sample Country",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Countties",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://localhost:8080/serverapp/getCountries"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCountry",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"id\": 1\n }"
+				},
+				"url": "http://localhost:8080/serverapp/deleteCountry"
+			},
+			"response": []
+		},
+		{
+			"name": "Add country",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t    \"id\": 6,\n        \"countryName\": \"pak\",\n        \"population\": 7777\n\t\n}"
+				},
+				"url": "http://{{protocol}}:{{port}}/serverapp/addCountry"
+			},
+			"response": []
+		},
+		{
+			"name": "Modify Country",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t    \"id\": 6,\n        \"countryName\": \"pak\",\n        \"population\": 966\n\t\n}"
+				},
+				"url": "http://localhost:8080/serverapp/modifyCountry"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Country",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"id\": 1\n }"
+				},
+				"url": "http://localhost:8080/serverapp/getCountry"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "66c42b6e-839e-4fe4-ae9f-b6e58477eaf7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6612de24-efb0-4578-b33b-81734cfbd1bf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
